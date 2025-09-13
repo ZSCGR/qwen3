@@ -351,17 +351,17 @@ function App() {
             value={input}
             disabled={status !== "ready"}
             title={status === "ready" ? "模型已准备好" : "模型未加载"}
-            onKeyDown={(e) => {
-              if (
-                input.length > 0 &&
-                !isRunning &&
-                e.key === "Enter" &&
-                !e.shiftKey
-              ) {
-                e.preventDefault(); // Prevent default behavior of Enter key
-                onEnter(input);
-              }
-            }}
+            // onKeyDown={(e) => {
+            //   if (
+            //     input.length > 0 &&
+            //     !isRunning &&
+            //     e.key === "Enter" &&
+            //     !e.shiftKey
+            //   ) {
+            //     e.preventDefault(); // Prevent default behavior of Enter key
+            //     onEnter(input);
+            //   }
+            // }}
             onInput={(e) => setInput(e.target.value)}
           />
           {isRunning ? (
